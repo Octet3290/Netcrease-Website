@@ -1,0 +1,221 @@
+/* Global Styles */
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.brand-gradient {
+    background: linear-gradient(135deg, #0ea5e9, #6366f1);
+}
+
+.hero-bg {
+    background-image: linear-gradient(90deg, rgba(135, 155, 255, 0.037), rgba(139, 90, 224, 0.041));
+}
+
+.glass {
+    background: rgba(89, 76, 76, 0.6);
+    backdrop-filter: blur(6px);
+}
+
+/* Base Link Underline Animation */
+a {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* Exclude buttons from underline animation */
+a:not([class*="bg-"]):not([class*="border"]):not(.no-underline-on-hover)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #0ea5e9;
+    transition: width 0.3s ease;
+}
+
+a:not([class*="bg-"]):not([class*="border"]):not(.no-underline-on-hover):hover::after {
+    width: 100%;
+}
+
+/* Button Zoom Effect */
+
+
+a[class*="bg-"]:hover,
+button[class*="bg-"]:hover,
+.zoom-hover:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomInSoft {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-right {
+    animation: fadeRight 0.9s ease-out both;
+}
+
+.animate-fade-up {
+    animation: fadeUp 0.9s ease-out both;
+}
+
+.animate-zoom-soft {
+    animation: zoomInSoft 1s ease-out both;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 25s linear infinite;
+}
+
+.reveal {
+    overflow: hidden;
+}
+
+.reveal span {
+    display: inline-block;
+    transform: translateY(100%);
+    animation: revealUp 0.8s cubic-bezier(.16, 1, .3, 1) forwards;
+}
+
+@keyframes revealUp {
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Extra Animations from other pages */
+.blur-word span {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px);
+    animation: blurIn 0.7s ease forwards;
+}
+
+@keyframes blurIn {
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+.word span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: wordUp 0.6s ease forwards;
+    animation-play-state: paused;
+}
+
+.word.animate span {
+    animation-play-state: running;
+}
+
+@keyframes wordUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    color: #FFF;
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+    fill: currentColor;
+}
+
+/* Tooltip for WhatsApp */
+.whatsapp-float::before {
+    content: "Chat with us";
+    position: absolute;
+    right: 75px;
+    background: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.whatsapp-float:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
