@@ -1,8 +1,8 @@
 <header class="fixed top-0 left-0 w-full z-[100] backdrop-blur bg-white/70 border-b transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="./index.html" class="flex items-center relative z-[102]">
+        <a href="./index.html" class="flex items-center relative z-[102]" aria-label="Go to homepage">
             <img src="./assets/images/logo.webp" alt="Netcrease Global Services LLP logo" class="w-40 md:w-48 h-auto"
-                loading="lazy" />
+                loading="lazy" width="192" height="48" />
         </a>
 
         <!-- Desktop Navigation -->
@@ -31,27 +31,27 @@
                     <div class="w-56 bg-white shadow-xl rounded-xl border border-gray-100">
                         <ul class="py-3">
                             <li>
-                                <a href="./services/bpo-services.html"
+                                <a href="/services/bpo-service.html"
                                     class="block px-5 py-2 text-sm text-paragraph hover:bg-sky-50 hover:text-sky-600">
                                     BPO Services
                                 </a>
                             </li>
                             <li>
-                                <a href="./services/app-development.html"
+                                <a href="/services/web-development-service.html"
                                     class="block px-5 py-2 text-sm text-paragraph hover:bg-sky-50 hover:text-sky-600">
-                                    App Development
+                                    Web Development
                                 </a>
                             </li>
                             <li>
-                                <a href="./services/digital-marketing.html"
+                                <a href="/services/digital-marketing-service.html"
                                     class="block px-5 py-2 text-sm text-paragraph hover:bg-sky-50 hover:text-sky-600">
                                     Digital Marketing
                                 </a>
                             </li>
                             <li>
-                                <a href="./services/outsourcing.html"
+                                <a href="/services/kpo-service.html"
                                     class="block px-5 py-2 text-sm text-paragraph hover:bg-sky-50 hover:text-sky-600">
-                                    Outsourcing
+                                    KPO Services
                                 </a>
                             </li>
                         </ul>
@@ -72,7 +72,8 @@
 
         <!-- Mobile Menu Toggle -->
         <button id="mobileBtn"
-            class="md:hidden relative z-[102] w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none group">
+            class="md:hidden relative z-[102] w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none group"
+            aria-label="Open main menu" aria-controls="mobileMenu" aria-expanded="false">
             <span class="hamburger-line w-6 h-0.5 bg-heading transition-all duration-300 origin-center"></span>
             <span class="hamburger-line w-6 h-0.5 bg-heading transition-all duration-300 origin-center"></span>
             <span class="hamburger-line w-6 h-0.5 bg-heading transition-all duration-300 origin-center"></span>
@@ -139,9 +140,10 @@
             <!-- Socials -->
             <div class="flex gap-6">
                 <a href="https://www.linkedin.com/company/netcrease"
-                    class="text-gray-400 hover:text-heading transition-colors">LinkedIn</a>
-                <a href="https://www.facebook.com/netcrease"
-                    class="text-gray-400 hover:text-heading transition-colors">Facebook</a>
+                    class="text-gray-400 hover:text-heading transition-colors"
+                    aria-label="Netcrease on LinkedIn">LinkedIn</a>
+                <a href="https://www.facebook.com/netcrease" class="text-gray-400 hover:text-heading transition-colors"
+                    aria-label="Netcrease on Facebook">Facebook</a>
             </div>
         </div>
     </div>

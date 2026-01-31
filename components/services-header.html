@@ -11,8 +11,53 @@
                 class="text-sm font-medium text-paragraph hover:text-sky-600 transition-colors">Home</a>
             <a href="../about.html"
                 class="text-sm font-medium text-paragraph hover:text-sky-600 transition-colors">About</a>
-            <a href="../services.html"
-                class="text-sm font-medium text-paragraph hover:text-sky-600 transition-colors">Services</a>
+             <div class="relative group">
+                <!-- Trigger -->
+                <a href="./services.html"
+                    class="text-sm font-medium text-paragraph hover:text-sky-600 transition-colors flex items-center gap-1">
+                    Services
+                    <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </a>
+
+                <!-- Dropdown -->
+                <div class="absolute left-0 top-full pt-3 z-[999]
+        opacity-0 invisible
+        group-hover:opacity-100 group-hover:visible
+        transition-all duration-300">
+
+                    <div class="w-56 bg-white shadow-xl rounded-xl border border-gray-100">
+                        <ul class="py-3">
+                            <li>
+                                <a href="/services/bpo-service.html"
+                                    class="block px-5 py-2 text-sm text-paragraph hover:bg-sky-50 hover:text-sky-600">
+                                    BPO Services
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/services/web-development-service.html"
+                                    class="block px-5 py-2 text-sm text-paragraph hover:bg-sky-50 hover:text-sky-600">
+                                    Web Development
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/services/digital-marketing-service.html"
+                                    class="block px-5 py-2 text-sm text-paragraph hover:bg-sky-50 hover:text-sky-600">
+                                    Digital Marketing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/services/kpo-service.html"
+                                    class="block px-5 py-2 text-sm text-paragraph hover:bg-sky-50 hover:text-sky-600">
+                                    KPO Services
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <a href="../whynetcrease.html"
                 class="text-sm font-medium text-paragraph hover:text-sky-600 transition-colors">Why Netcrease</a>
             <a href="../contact.html"

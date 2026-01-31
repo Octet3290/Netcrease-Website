@@ -107,7 +107,7 @@ button[class*="bg-"]:hover,
 }
 
 .animate-scroll {
-    animation: scroll 25s linear infinite;
+    animation: scroll 45s linear infinite;
 }
 
 .reveal {
@@ -218,4 +218,17 @@ button[class*="bg-"]:hover,
 .whatsapp-float:hover::before {
     opacity: 1;
     visibility: visible;
+}
+
+/* Screen-reader only helper */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
