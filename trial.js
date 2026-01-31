@@ -33,6 +33,8 @@ document.querySelectorAll('.reveal').forEach(el => {
         .join('');
 });
 
+
+
 //  AOS ANIMATION INITIALIZATION
 AOS.init({
     duration: 900,
